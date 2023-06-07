@@ -1,3 +1,32 @@
-.content-btn {
-  border-radius: 50%;
+.content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-family: "Microsoft Sans Serif";
+}
+
+.content-search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+.product-image {
+  height: 20rem;
+  width: 20rem;
+}
+.content-1 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.content-product {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.content-3 {
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
 }

@@ -3,6 +3,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   return (
@@ -11,7 +12,9 @@ export const Header = () => {
 
       <div className="header-name">
         <p className="header-name-item"> New </p>
-        <p className="header-name-item"> Categories </p>
+        <p className="header-name-item">
+          <Link to="/categories"> Categories </Link>
+        </p>
         <p className="header-name-item"> Stores </p>
       </div>
 
@@ -20,7 +23,6 @@ export const Header = () => {
           <AddShoppingCartIcon fontSize="large" />
         </a>
         <a>
-          {" "}
           <PersonOutlineIcon fontSize="large" />
         </a>
         <a>
