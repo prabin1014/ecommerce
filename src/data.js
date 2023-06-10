@@ -1,42 +1,41 @@
-const datas = [
+const data = [
   {
     key: 1,
     url: "image-1.jpg",
-    text: "Nike Air Pro",
+    text: "nike air pro",
     price: "$50",
   },
 
   {
     key: 2,
     url: "image-2.jpg",
-    text: "Nike Green Slee",
+    text: "nike green slee",
     price: "$35",
   },
   {
     key: 3,
     url: "image-3.jpg",
-    text: "Sweatshirt",
+    text: "sweatshirt",
     price: "$12",
   },
   {
     key: 4,
     url: "image-4.jpg",
-    text: "Denim Shirt",
+    text: "denim shirt",
     price: "$15",
   },
   {
     key: 5,
     url: "image-5.jpg",
-    text: "Checked Shirt",
+    text: "checked shirt",
     price: "$10",
   },
 
   {
     key: 6,
     url: "image-6.jpg",
-    text: "Bomber Jacket",
+    text: "bomber jacket",
     price: "$29.99",
   },
 ];
-
-export default datas;
+export default data;

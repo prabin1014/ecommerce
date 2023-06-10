@@ -2,13 +2,15 @@
   display: flex;
   justify-content: space-evenly;
   font-weight: 700;
+  margin-top: 1rem;
+  align-items: center;
 }
 
 .brand-name {
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
-  flex-basis: 400px;
+  flex-basis: 20rem;
 }
 .header-name {
   display: flex;
@@ -20,4 +22,12 @@
   display: flex;
   gap: 4rem;
   padding-top: 5px;
+}
+.profile {
+  position: relative;
+}
+.profile-information {
+  position: absolute;
+  width: max-content;
+  background-color: white;
 }
