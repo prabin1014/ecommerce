@@ -1,0 +1,44 @@
+.wishlist {
+  font-family: "Microsoft Sans Serif";
+}
+.wishlist-title-1 {
+  position: absolute;
+  width: 50rem;
+  left: 9rem;
+  top: 16rem;
+  font-size: 2.5rem;
+}
+
+.wishlist-title-2 {
+  position: absolute;
+  width: 157px;
+  height: 23px;
+  left: 144px;
+  top: 318px;
+  font-weight: 400;
+  font-size: 16px;
+
+  color: rgba(0, 0, 0, 0.5);
+}
+.wishlist-info {
+  position: absolute;
+  width: 504px;
+  height: 46px;
+  left: 465px;
+  top: 401px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 46px;
+}
+.wishlist-link {
+  position: absolute;
+  width: 374px;
+  height: 56px;
+  left: 453px;
+  top: 486px;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-family: "Microsoft Sans Serif";
+  font-weight: 400;
+}

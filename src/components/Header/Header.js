@@ -5,6 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 export const Header = () => {
@@ -25,8 +26,12 @@ export const Header = () => {
       </div>
 
       <div className="header-logos">
-        <AddShoppingCartIcon fontSize="large" />
-        <FavoriteBorderIcon fontSize="large" />
+        <Link to="/cart">
+          <AddShoppingCartIcon fontSize="large" />
+        </Link>
+        <Link to="/wishlist">
+          <FavoriteBorderIcon fontSize="large" />{" "}
+        </Link>
 
         {/* conditions for either to display profile dashboard or not  */}
 

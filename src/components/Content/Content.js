@@ -1,6 +1,6 @@
 import React from "react";
-import "./Content.css";
 import data from "../../data";
+import "./Content.css";
 
 export const Content = () => {
   // declaring state to take input value
