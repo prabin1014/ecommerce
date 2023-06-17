@@ -31,7 +31,6 @@ export const Content = () => {
   const filtered = data.filter((product) => {
     return product.text.includes(searchTerm);
   });
-  console.log(filtered);
 
   // JSX elements starts from here
   return (
