@@ -39,19 +39,19 @@ export const Header = () => {
           <PersonOutlineIcon onClick={changeCollapse} fontSize="large" />
           {collapse && (
             <div className="profile-information">
-              <p>
-                <PersonOutlineIcon />
-                Profile
-              </p>
-              <p>
+              <div className="profile-information-item">
+                <PersonOutlineIcon /> Profile
+              </div>
+
+              <div className="profile-information-item">
                 <BookmarkBorderIcon /> Saved Items
-              </p>
-              <p>
+              </div>
+              <div className="profile-information-item">
                 <StarBorderIcon /> Ratings
-              </p>
-              <p>
+              </div>
+              <div className="profile-information-item">
                 <NotificationsNoneIcon /> Notifications
-              </p>
+              </div>
             </div>
           )}
         </div>

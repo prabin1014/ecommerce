@@ -25,9 +25,17 @@
 }
 .profile {
   position: relative;
+  cursor: pointer;
 }
 .profile-information {
   position: absolute;
   width: max-content;
   background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+}
+.profile-information-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem;
 }
