@@ -31,7 +31,7 @@ li:hover {
 .footer-social-email {
   display: flex;
 }
-.footer-social-email-input {
+.footer-social-input {
   width: 11rem;
   background-color: #121212;
   color: #ccc;
@@ -53,4 +53,8 @@ li:hover {
   font-size: 12px;
   padding-top: 5px;
   text-align: center;
+}
+
+.footer-social-media:hover {
+  color: #c41e3a;
 }

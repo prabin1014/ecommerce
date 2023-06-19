@@ -27,7 +27,7 @@ export const Footer = () => {
         {/* Contact section starts from here */}
 
         <div className="footer-contact">
-          <h3> Contact Us </h3>
+          <h3> Talk To Us </h3>
           <ul>
             <li>
               <div className="footer-contact-list"> Kathmandu, Nepal </div>
@@ -50,7 +50,6 @@ export const Footer = () => {
               <div className="footer-information-list"> My Account </div>
             </li>
             <li>
-              {" "}
               <div className="footer-information-list"> Wishlist </div>
             </li>
             <li>
@@ -69,7 +68,7 @@ export const Footer = () => {
           <p> Enter your email to unlock 10% off </p>
           <div className="footer-social-email">
             <input
-              className="footer-social-email-input"
+              className="footer-social-input"
               type="email"
               placeholder="Type your email here"
             ></input>
@@ -80,7 +79,11 @@ export const Footer = () => {
           <h3> Follow Us </h3>
           <ul>
             <li>
-              <FacebookOutlined fontSize="large" sx={{ color: "white" }} />
+              <FacebookOutlined
+                className="footer-social-media"
+                fontSize="large"
+                sx={{ color: "white" }}
+              />
             </li>
             <li>
               <Instagram fontSize="large" style={{ color: "white" }} />

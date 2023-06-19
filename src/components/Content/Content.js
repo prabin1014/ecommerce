@@ -1,12 +1,34 @@
 import React from "react";
 import data from "../../data";
-import Homeimage from "../../assets/home-image.jpg";
+import Homeimage1 from "../../assets/home-image-1.jpg";
+import Homeimage2 from "../../assets/home-image-2.jpg";
+
 import { Footer } from "../Footer";
 import "./Content.css";
 
 export const Content = () => {
   // declaring state to take input value
   const [searchTerm, setSearchTerm] = React.useState("");
+
+  // array to store home images
+  const homePhoto = [Homeimage1, Homeimage2];
+  // state to change the index to change the images
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  React.useEffect(() => {
+    const timerID = setInterval(() => {
+      changeImage();
+    }, 5000);
+
+    return () => {
+      clearInterval(timerID);
+    };
+  }, []);
+  const changeImage = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % homePhoto.length);
+  };
+
+  const currentImage = homePhoto[currentIndex];
 
   // performing map method over our data
   const products = data.map((item) => {
@@ -41,14 +63,14 @@ export const Content = () => {
       <div className="content">
         <img
           className="content-home-image"
-          src={Homeimage}
+          src={currentImage}
           alt="Home"
           loading="lazy"
         />
         <div className="content-home-text"> Explore Now </div>
 
         <div className="content-nav">
-          <h3 className="content-text"> 10% off on everything </h3>
+          <h3 className="content-text"> This Week's Featured </h3>
 
           <div className="content-search">
             <input
