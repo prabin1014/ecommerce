@@ -6,3 +6,51 @@
   display: flex;
   justify-content: space-around;
 }
+h3 {
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.footer-social > ul {
+  display: flex;
+  gap: 1.5rem;
+}
+li:hover {
+  color: #c41e3a;
+  transition: color 0.3s ease 0.2s;
+}
+.footer-social-email {
+  display: flex;
+}
+.footer-social-email-input {
+  width: 11rem;
+  background-color: #121212;
+  color: #ccc;
+  border: none;
+  outline: none;
+}
+.footer-social-submit {
+  width: max-content;
+  height: max-content;
+  background-color: #494949;
+}
+
+.footer-copyright {
+  height: 1.5rem;
+  background-color: black;
+}
+.footer-copyright-text {
+  margin-block-end: 0;
+  font-size: 12px;
+  padding-top: 5px;
+  text-align: center;
+}
