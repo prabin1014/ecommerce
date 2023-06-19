@@ -1,5 +1,6 @@
 import React from "react";
 import data from "../../data";
+import Homeimage from "../../assets/home-image.jpg";
 import { Footer } from "../Footer";
 import "./Content.css";
 
@@ -13,9 +14,10 @@ export const Content = () => {
       <div className="content-products" key={item.key}>
         <div className="content-products-child">
           <img
+            className="product-image"
             src={require(`../../assets/${item.url}`)}
             alt="product"
-            className="product-image"
+            loading="lazy"
           />
           <p className="product-detail"> {item.text} </p>
           <p className="product-detail"> {item.price}</p>
@@ -37,8 +39,16 @@ export const Content = () => {
   return (
     <>
       <div className="content">
+        <img
+          className="content-home-image"
+          src={Homeimage}
+          alt="Home"
+          loading="lazy"
+        />
+        <div className="content-home-text"> Explore Now </div>
+
         <div className="content-nav">
-          <h3 className="text"> 10% off on everything </h3>
+          <h3 className="content-text"> 10% off on everything </h3>
 
           <div className="content-search">
             <input
@@ -52,7 +62,6 @@ export const Content = () => {
             <label> Search </label>
           </div>
         </div>
-
         {/* ternary operator for our search filter */}
 
         {searchTerm
@@ -61,9 +70,10 @@ export const Content = () => {
                 <div className="content-products" key={product.key}>
                   <div className="content-products-child">
                     <img
+                      className="product-image"
                       src={require(`../../assets/${product.url}`)}
                       alt="product"
-                      className="product-image"
+                      loading="lazy"
                     />
                     <p> {product.text} </p>
                     <span> {product.price}</span>
