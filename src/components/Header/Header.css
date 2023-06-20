@@ -18,11 +18,16 @@
   font-size: 1rem;
   letter-spacing: 4px;
 }
+.header-name-item:hover {
+  color: #c41e3a;
+  cursor: pointer;
+}
 .header-logos {
   display: flex;
   gap: 4rem;
   padding-top: 5px;
 }
+
 .profile {
   position: relative;
   cursor: pointer;

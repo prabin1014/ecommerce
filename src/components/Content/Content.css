@@ -62,6 +62,6 @@
 .content-products-child {
   padding: 1rem;
 }
-.product-detail {
-  text-align: center;
+.product-detail-icon {
+  display: inline-block;
 }

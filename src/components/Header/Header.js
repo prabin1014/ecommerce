@@ -1,5 +1,5 @@
 import React from "react";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
@@ -27,7 +27,7 @@ export const Header = () => {
 
       <div className="header-logos">
         <Link to="/cart">
-          <AddShoppingCartIcon fontSize="large" />
+          <ShoppingCartOutlinedIcon fontSize="large" />
         </Link>
         <Link to="/wishlist">
           <FavoriteBorderIcon fontSize="large" />{" "}
