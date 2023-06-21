@@ -44,9 +44,31 @@ export const Content = () => {
           />
           <p className="product-detail"> {item.text} </p>
           <span className="product-detail-price"> {item.price} </span>
-          <p className="product-detail-icons"> {<ShoppingCartOutlined />}</p>
+          <p className="product-detail-icons">
+            {
+              <ShoppingCartOutlined
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                    borderRadius: "50%",
+                  },
+                }}
+              />
+            }
+          </p>
           <p className="product-detail-icons favorite-icon">
-            {<FavoriteBorder />}
+            {
+              <FavoriteBorder
+                sx={{
+                  "&:hover": {
+                    backgroundColor: "black",
+                    color: "white",
+                    borderRadius: "50%",
+                  },
+                }}
+              />
+            }
           </p>
         </div>
       </div>
