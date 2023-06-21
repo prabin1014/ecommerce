@@ -2,8 +2,7 @@ import React from "react";
 import data from "../../data";
 import Homeimage1 from "../../assets/home-image-1.jpg";
 import Homeimage2 from "../../assets/home-image-2.jpg";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { ShoppingCartOutlined, FavoriteBorder } from "@mui/icons-material";
 
 import { Footer } from "../Footer";
 import "./Content.css";
@@ -44,10 +43,11 @@ export const Content = () => {
             loading="lazy"
           />
           <p className="product-detail"> {item.text} </p>
-          <span className="product-detail"> {item.price}</span>
-
-          <p className="product-detail-icon">{<ShoppingCartOutlinedIcon />}</p>
-          <span>{<FavoriteBorderIcon />}</span>
+          <span className="product-detail-price"> {item.price} </span>
+          <p className="product-detail-icons"> {<ShoppingCartOutlined />}</p>
+          <p className="product-detail-icons favorite-icon">
+            {<FavoriteBorder />}
+          </p>
         </div>
       </div>
     );

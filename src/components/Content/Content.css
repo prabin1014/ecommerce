@@ -54,6 +54,7 @@
   width: 20rem;
   background-color: #f2f2f2;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  display: block;
 }
 .content-products {
   display: flex;
@@ -62,6 +63,16 @@
 .content-products-child {
   padding: 1rem;
 }
-.product-detail-icon {
+.product-detail-price {
+  display: block;
+}
+.product-detail-icons {
   display: inline-block;
+}
+.product-detail-icons:hover {
+  cursor: pointer;
+  color: "black";
+}
+.favorite-icon {
+  padding: 0 0 0 1rem;
 }
