@@ -12,8 +12,8 @@ export const App = () => {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Content />} />
-          <Route path="/wishlist" element={<Wish />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="wishlist" element={<Wish />} />
+          <Route path="cart" element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>
