@@ -25,7 +25,13 @@ export const Carousel = () => {
   ];
   return (
     <div className="carousel">
-      <div className="carousel-content"> sabai thik xa</div>
+      {carouselData.map((item) => (
+        <div className="carousel-content">
+          <div> {item.icon} </div>
+          <div> {item.description} </div>
+          <div> {item.person} </div>
+        </div>
+      ))}
     </div>
   );
 };
