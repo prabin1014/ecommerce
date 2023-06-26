@@ -3,8 +3,9 @@ import data from "../../data";
 import Homeimage1 from "../../assets/home-image-1.jpg";
 import Homeimage2 from "../../assets/home-image-2.jpg";
 import { ShoppingCartOutlined, FavoriteBorder } from "@mui/icons-material";
-
+import { Carousel } from "../Carousel/Carousel";
 import { Footer } from "../Footer";
+
 import "./Content.css";
 
 export const Content = () => {
@@ -132,6 +133,7 @@ export const Content = () => {
             })
           : products}
       </div>
+      <Carousel />
       <Footer />
     </>
   );
