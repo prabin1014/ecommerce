@@ -4,12 +4,21 @@ import { ReactComponent as Profile2 } from "../../assets/profile-2.svg";
 import "./Carousel.css";
 
 export const Carousel = () => {
+  const [change, setChange] = React.useState(0);
+  function toggleRight() {
+    setChange((prevIndex) => (prevIndex + 1) % carouselData.length);
+  }
+  function toggleLeft() {
+    if (change > 0 && change < carouselData.length) {
+      setChange((prevIndex) => (prevIndex - 1) % carouselData.length);
+    }
+  }
   const carouselData = [
     {
-      icon: <Profile2 />,
+      icon: <Profile1 />,
       description: `I completely love this site, found it on EBay at first now I just order directly through them...I am
                          always complemented on my outfits Thank you for having great clothes that fit and look good.`,
-      person: "Alex Costa",
+      person: "Gracie Abrahams",
     },
     {
       icon: <Profile2 />,
@@ -20,18 +29,20 @@ export const Carousel = () => {
     {
       icon: <Profile1 />,
       description: `Thank you for offering these beautifully unique boots. They are flattering and awesome.`,
-      person: "Bob Ziroll",
+      person: "Georgina Hill",
     },
   ];
+
   return (
     <div className="carousel">
-      {carouselData.map((item) => (
-        <div className="carousel-content">
-          <div> {item.icon} </div>
-          <div> {item.description} </div>
-          <div> {item.person} </div>
-        </div>
-      ))}
+      <div className="carousel-content">
+        <div> {carouselData[change].icon}</div>
+        <div> {carouselData[change].description} </div>
+        <div> {carouselData[change].person} </div>
+      </div>
+
+      <button onClick={toggleLeft} />
+      <button onClick={toggleRight} />
     </div>
   );
 };
