@@ -1,6 +1,7 @@
 import React from "react";
 import { ReactComponent as Profile1 } from "../../assets/profile-1.svg";
 import { ReactComponent as Profile2 } from "../../assets/profile-2.svg";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 import "./Carousel.css";
 
 export const Carousel = () => {
@@ -41,8 +42,8 @@ export const Carousel = () => {
         <div> {carouselData[change].person} </div>
       </div>
 
-      <button onClick={toggleLeft} />
-      <button onClick={toggleRight} />
+      <KeyboardArrowLeft fontSize="large" onClick={toggleLeft} />
+      <KeyboardArrowRight fontSize="large" onClick={toggleRight} />
     </div>
   );
 };
