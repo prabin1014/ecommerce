@@ -17,8 +17,7 @@ export const Carousel = () => {
   const carouselData = [
     {
       icon: <Profile1 />,
-      description: `I completely love this site, found it on EBay at first now I just order directly through them...I am
-                         always complemented on my outfits Thank you for having great clothes that fit and look good.`,
+      description: `I am always complemented on my outfits Thank you for having great clothes that fit and look good.`,
       person: "Gracie Abrahams",
     },
     {
@@ -38,12 +37,22 @@ export const Carousel = () => {
     <div className="carousel">
       <div className="carousel-content">
         <div> {carouselData[change].icon}</div>
-        <div> {carouselData[change].description} </div>
-        <div> {carouselData[change].person} </div>
+        <div className="carousel-description">
+          {carouselData[change].description}
+        </div>
+        <div className="carousel-person"> {carouselData[change].person} </div>
       </div>
 
-      <KeyboardArrowLeft fontSize="large" onClick={toggleLeft} />
-      <KeyboardArrowRight fontSize="large" onClick={toggleRight} />
+      <KeyboardArrowLeft
+        className="carousel-left"
+        fontSize="large"
+        onClick={toggleLeft}
+      />
+      <KeyboardArrowRight
+        className="carousel-right"
+        fontSize="large"
+        onClick={toggleRight}
+      />
     </div>
   );
 };
