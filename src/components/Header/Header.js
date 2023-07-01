@@ -29,7 +29,7 @@ export const Header = () => {
 
       <div className="header-logo">
         <NavLink
-          to="/cart"
+          to="cart"
           className="header-logo-link"
 
           /* Can also pass function like this in navlink for styling purpose 
@@ -39,7 +39,7 @@ export const Header = () => {
           <ShoppingCartOutlinedIcon fontSize="large" />
         </NavLink>
 
-        <NavLink to="/wishlist" className="header-logo-link">
+        <NavLink to="wishlist" className="header-logo-link">
           <FavoriteBorderIcon fontSize="large" />
         </NavLink>
 
