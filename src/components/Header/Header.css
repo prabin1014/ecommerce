@@ -7,6 +7,8 @@
 }
 
 .brand-name {
+  color: black;
+  text-decoration: none;
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
@@ -22,12 +24,15 @@
   color: #c41e3a;
   cursor: pointer;
 }
-.header-logos {
+.header-logo {
+  color: black;
   display: flex;
   gap: 4rem;
   padding-top: 5px;
 }
-
+.header-logo-link {
+  color: black;
+}
 .profile {
   position: relative;
   cursor: pointer;

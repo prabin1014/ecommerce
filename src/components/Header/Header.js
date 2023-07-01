@@ -5,7 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 export const Header = () => {
@@ -17,7 +17,9 @@ export const Header = () => {
   }
   return (
     <header className="header">
-      <div className="brand-name"> ELEVATE </div>
+      <NavLink to="/" className="brand-name">
+        <div className="brand-name"> ELEVATE </div>
+      </NavLink>
 
       <div className="header-name">
         <p className="header-name-item"> New </p>
@@ -25,13 +27,21 @@ export const Header = () => {
         <p className="header-name-item"> Stores </p>
       </div>
 
-      <div className="header-logos">
-        <Link to="/cart">
+      <div className="header-logo">
+        <NavLink
+          to="/cart"
+          className="header-logo-link"
+
+          /* Can also pass function like this in navlink for styling purpose 
+          when we enter inside certain route
+           {({ isActive }) => (isActive ? "header-logo-link" : null)} */
+        >
           <ShoppingCartOutlinedIcon fontSize="large" />
-        </Link>
-        <Link to="/wishlist">
-          <FavoriteBorderIcon fontSize="large" />{" "}
-        </Link>
+        </NavLink>
+
+        <NavLink to="/wishlist" className="header-logo-link">
+          <FavoriteBorderIcon fontSize="large" />
+        </NavLink>
 
         {/* conditions for either to display profile dashboard or not  */}
 
