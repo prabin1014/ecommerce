@@ -16,6 +16,7 @@ export const Content = () => {
   // state to change the index to change the images
   const [currentIndex, setCurrentIndex] = React.useState(0);
 
+  // calling changeImage function to change the home image
   React.useEffect(() => {
     const timerID = setInterval(() => {
       changeImage();
@@ -25,10 +26,13 @@ export const Content = () => {
       clearInterval(timerID);
     };
   }, []);
+
+  // function that changes home image
   const changeImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % homePhoto.length);
   };
 
+  // current image variabe for storing the home image that keeps changing
   const currentImage = homePhoto[currentIndex];
 
   // performing map method over our data
