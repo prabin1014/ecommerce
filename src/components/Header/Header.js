@@ -5,6 +5,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import StarBorderIcon from "@mui/icons-material/StarBorder";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import InventoryIcon from '@mui/icons-material/Inventory';
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 
@@ -28,6 +29,9 @@ export const Header = () => {
       </div>
 
       <div className="header-logo">
+        <NavLink>
+          <InventoryIcon fontSize="large" />
+        </NavLink>
         <NavLink
           to="cart"
           className="header-logo-link"
