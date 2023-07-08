@@ -29,9 +29,12 @@ export const Header = () => {
       </div>
 
       <div className="header-logo">
-        <NavLink>
-          <InventoryIcon fontSize="large" />
+        <NavLink 
+        to="warehouse"
+        className="header-logo-link">
+          <InventoryIcon fontSize="large" color="black" />
         </NavLink>
+        
         <NavLink
           to="cart"
           className="header-logo-link"
