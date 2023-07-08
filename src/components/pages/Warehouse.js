@@ -79,20 +79,20 @@ const fetcher = async (url) => {
   };
   
 export const Warehouse = () => {
-    const PAGE_SIZE = 10; // Number of items per page
+
     const { data, error } = useSWR('https://api.dottrade.com.np/api/method/test-item', fetcher);
     console.log(data)
   
+    if (error) {
+        return <h1>Error: {error.message}</h1>;
+    }
+    
+    if (!data) {
+        return <h1>Loading...</h1>;
+    }
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(5);
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
-  
-    if (!data) {
-      return <div>Loading...</div>;
-    }
-  
+    
     const handleChangePage = (event, newPage) => {
       setPage(newPage)
     };
@@ -113,7 +113,7 @@ export const Warehouse = () => {
                 <TableCell style={{fontWeight: 600}}> Web Item Name </TableCell>
                 <TableCell style={{fontWeight: 600}}> Item Group </TableCell>
                 <TableCell style={{fontWeight: 600}}> Short Description </TableCell>
-                {/* Add more table header cells */}
+                
               </TableRow>
             </TableHead>
             <TableBody>
@@ -129,6 +129,7 @@ export const Warehouse = () => {
                 </TableRow>
               ))}
             </TableBody>
+            {/* Table Footer */}
             <TableFooter>
                 <TableRow>
                 <TablePagination
