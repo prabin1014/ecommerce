@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import {
@@ -88,16 +88,15 @@ const fetcher = async (url) => {
   const data = await response.json();
   return data;
 };
-
 export const Warehouse = () => {
   const [search, setSearch] = useState();
-
+  const [loading, setLoading] = useState(true);
   const params = new URLSearchParams("start=0");
 
-  if (search){
-    params.append("search", search)
+  if (search) {
+    params.append("search", search);
   }
-  const { data, error} = useSWR(
+  const { data, error } = useSWR(
     `https://api.dottrade.com.np/api/method/test-item?${params.toString()}`,
     fetcher
   );
@@ -109,20 +108,26 @@ export const Warehouse = () => {
 
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  useEffect(() => {
+    if (data) {
+      setLoading(false);
+    }
+  }, [data]);
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
 
-  if (!data) {
-    return <div>Loading...</div>;
-  }
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
 
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
   };
+
   return (
     <TableContainer component={Paper}>
       <input
@@ -144,30 +149,37 @@ export const Warehouse = () => {
         </TableHead>
         <TableBody>
           {/* Table rows */}
-          {(rowsPerPage > 0
-            ? data.data.items.slice(
-                page * rowsPerPage,
-                page * rowsPerPage + rowsPerPage
-              )
-            : data.data.items
-          ).map((item) => (
-            <TableRow key={item.name}>
+            {/* Conditional rendering of table rows */}
+            {data ? (
+            (rowsPerPage > 0
+              ? data.data.items.slice(
+                  page * rowsPerPage,
+                  page * rowsPerPage + rowsPerPage
+                )
+              : data.data.items
+            ).map((item) => (
+              <TableRow key={item.name}>
               <TableCell>{item.name}</TableCell>
               <TableCell>{item.web_item_name}</TableCell>
               <TableCell> {item.item_group}</TableCell>
               <TableCell style={{ width: 500 }}>
-                {" "}
                 {item.short_description}
               </TableCell>
+              </TableRow>
+            ))
+          ) : (
+            <TableRow>
+              <TableCell colSpan={4}>Loading...</TableCell>
             </TableRow>
-          ))}
+          )}
+     
         </TableBody>
         <TableFooter>
           <TableRow>
             <TablePagination
               rowsPerPageOptions={[5, 10, 15, { label: "All", value: -1 }]}
               colspan={3}
-              count={data.data.items.length}
+              count={data ? data.data.items.length : 0}
               rowsPerPage={rowsPerPage}
               page={page}
               SelectProps={{
