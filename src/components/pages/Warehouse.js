@@ -83,16 +83,16 @@ export const Warehouse = () => {
     const { data, error } = useSWR('https://api.dottrade.com.np/api/method/test-item', fetcher);
     console.log(data)
   
+    
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(5);
     if (error) {
-        return <h1>Error: {error.message}</h1>;
+        return <div>Error: {error.message}</div>;
     }
     
     if (!data) {
-        return <h1>Loading...</h1>;
+        return <div>Loading...</div>;
     }
-    const [page, setPage] = useState(0);
-    const [rowsPerPage, setRowsPerPage] = useState(5);
-    
     const handleChangePage = (event, newPage) => {
       setPage(newPage)
     };
@@ -129,7 +129,6 @@ export const Warehouse = () => {
                 </TableRow>
               ))}
             </TableBody>
-            {/* Table Footer */}
             <TableFooter>
                 <TableRow>
                 <TablePagination

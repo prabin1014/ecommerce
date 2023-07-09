@@ -12,11 +12,11 @@
   font-size: 30px;
   font-weight: bold;
   letter-spacing: 10px;
-  flex-basis: 20rem;
+  flex-basis: 15rem;
 }
 .header-name {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
   font-size: 1rem;
   letter-spacing: 4px;
 }
@@ -27,7 +27,7 @@
 .header-logo {
   color: black;
   display: flex;
-  gap: 4rem;
+  gap: 3rem;
   padding-top: 5px;
 }
 .header-logo-link {
