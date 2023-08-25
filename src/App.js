@@ -1,5 +1,4 @@
 import React from "react";
-// import { Header } from "./components/Header/Header";
 import { Content } from "./components/Content/Content";
 import { Layout } from "./components/Layout";
 import { Wish } from "./components/pages/Wish";
@@ -7,7 +6,6 @@ import { Cart } from "./components/pages/Cart";
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 import "./App.css"
-
 
   export const App = () => {
   const { isAuthenticated, isLoading } = useAuth0();
