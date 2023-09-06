@@ -19,7 +19,6 @@ export const Footer = () => {
         ></path>
       </svg>
       <div className="footer-container">
-        {/* Category section starts from here */}
 
         <div className="footer-category">
           <h3> Top Categories </h3>
@@ -30,8 +29,6 @@ export const Footer = () => {
             <li> Men Boots </li>
           </ul>
         </div>
-
-        {/* Contact section starts from here */}
 
         <div className="footer-contact">
           <h3> Talk To Us </h3>
@@ -47,8 +44,6 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* Information section starts from here  */}
 
         <div className="footer-information">
           <h3> Information </h3>
@@ -67,8 +62,6 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-
-        {/* social section starts from here  */}
 
         <div className="footer-social">
           <h3> Let's Stay Connected </h3>
@@ -101,8 +94,6 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
-
-      {/* copyright section starts from here  */}
 
       <div className="footer-copyright">
         <p className="footer-copyright-text">
