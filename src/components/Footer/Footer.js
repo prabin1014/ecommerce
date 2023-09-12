@@ -24,8 +24,8 @@ export const Footer = () => {
           <h3> Top Categories </h3>
           <ul>
             <li> Shoes </li>
-            <li>Joggers </li>
-            <li>Tshirt</li>
+            <li> Joggers </li>
+            <li> Tshirt</li>
             <li> Men Boots </li>
           </ul>
         </div>
